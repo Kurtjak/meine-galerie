@@ -7,6 +7,76 @@ body {
 }
 
 header {
+  background: linear-gradient(to right, #333399, #ff00cc);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.item {
+  background: #222;
+  border: 2px solid #ff00cc;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.item img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.price {
+  color: #00ffcc;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.button {
+  background: #ff00cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #ff33dd;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.8rem;
+}
+body {
+  background-color: #111;
+  color: #f0f0f0;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
   background: #ff00cc;
   background: linear-gradient(to right, #333399, #ff00cc);
   padding: 2rem;
