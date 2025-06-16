@@ -2,6 +2,137 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Von Kurt's Galerie</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #3a3a5c);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .galerie {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .art-card {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .art-card:hover {
+      transform: scale(1.03);
+    }
+
+    .art-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .art-card h2 {
+      margin: 10px 0 5px;
+    }
+
+    .art-card p {
+      font-size: 0.95em;
+      color: #aaa;
+    }
+
+    .art-card strong {
+      display: block;
+      margin-top: 10px;
+      color: #00ff99;
+      font-size: 1.2em;
+    }
+
+    .buy-button {
+      background-color: deeppink;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    footer a {
+      color: #ff66cc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎨 Von Kurt's Galerie</h1>
+    <p>Willkommen zu meiner Sammlung – Kunst, Ideen und mehr!</p>
+  </header>
+
+  <main class="galerie">
+    <!-- Kunstwerk 1 -->
+    <div class="art-card">
+      <img src="bilder/retro-vision.jpg" alt="Retro Vision" />
+      <h2>Retro Vision</h2>
+      <p>Künstliche Intelligenz trifft Farbe</p>
+      <strong>20 €</strong>
+      <button class="buy-button" onclick="alert('Retro Vision wurde zum Warenkorb hinzugefügt!')">Jetzt kaufen</button>
+    </div>
+
+    <!-- Kunstwerk 2 -->
+    <div class="art-card">
+      <img src="bilder/blaue-zukunft.jpg" alt="Blaue Zukunft" />
+      <h2>Blaue Zukunft</h2>
+      <p>Ein Blick in morgen</p>
+      <strong>30 €</strong>
+      <button class="buy-button" onclick="alert('Blaue Zukunft wurde zum Warenkorb hinzugefügt!')">Jetzt kaufen</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 – Von Kurt’s Galerie – Alle Rechte vorbehalten | <a href="#">Kontakt</a>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Von Kurt's Galerie</title>
   <link rel="stylesheet" href="style.css" />
