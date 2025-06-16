@@ -1,3 +1,67 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #5f6bc1, #a84fcb);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+.galerie {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.karte {
+  background: #111;
+  border: 2px solid #ff00ff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+}
+
+.karte img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.karte h2 {
+  color: #fff;
+  margin: 1rem 0 0.5rem;
+}
+
+.karte p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.preis {
+  display: block;
+  margin: 0.5rem 0;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+button {
+  background: #ff00ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
 /* Modernes Retro-Design für Galerie */
 body {
   margin: 0;
