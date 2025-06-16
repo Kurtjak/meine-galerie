@@ -1,3 +1,92 @@
+/* Allgemeines Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e0033, #330066);
+  color: #fff;
+}
+
+/* Kopfbereich */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(90deg, #6600cc, #ff00cc);
+  color: white;
+  border-bottom: 4px solid #ff00cc;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Galerie-Sektion */
+.galerie {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galerie h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #ff66ff;
+}
+
+/* Bilder-Gitter */
+.bild-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Einzelnes Bild */
+figure {
+  background-color: #1a0033;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+figure:hover {
+  transform: scale(1.03);
+}
+
+figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid #ff00cc;
+}
+
+figcaption {
+  padding: 10px;
+  font-size: 1.1em;
+  color: #ffccff;
+}
+
+/* Kaufen Button */
+button {
+  background-color: #ff00cc;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #cc0099;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f3f3f3;
