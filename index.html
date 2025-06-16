@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Galerie</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Von Kurt's Galerie</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>🎨 Von Kurt's Galerie</h1>
-        <p>Willkommen zu meiner Sammlung – Kunst, Ideen und mehr!</p>
-    </header>
+  <header>
+    <h1>🎨 Von Kurt's Galerie</h1>
+    <p>Willkommen zu meiner Sammlung – Kunst, Ideen und mehr!</p>
+  </header>
 
-    <main>
-        <section>
-            <h2>Meine Bildergalerie</h2>
+  <main>
+    <h2>Meine Bildergalerie</h2>
+    <section class="gallery">
 
-            <div class="bildkarte">
-                <img src="bilder/20200316_110923.jpg" alt="Frühlingsblick">
-                <h3>Frühlingsblick</h3>
-                <button>Kaufen</button>
-            </div>
+      <div class="card">
+        <img src="bilder/20200316_110923.jpg" alt="Frühlingsblick" />
+        <h3>Frühlingsblick</h3>
+        <a href="#" class="btn">Kaufen</a>
+      </div>
 
-            <div class="bildkarte">
-                <img src="bilder/IMG-20190522-WA0000.jpg" alt="Retro Vision">
-                <h3>Retro Vision</h3>
-                <button>Kaufen</button>
-            </div>
+      <div class="card">
+        <img src="bilder/IMG-20190522-WA0000.jpg" alt="Retro Vision" />
+        <h3>Retro Vision</h3>
+        <a href="#" class="btn">Kaufen</a>
+      </div>
 
-            <div class="bildkarte">
-                <img src="bilder/20250615_1655_Winter Battle Encounter_remix.jpg" alt="Winter Battle">
-                <h3>Winter Battle</h3>
-                <button>Kaufen</button>
-            </div>
-        </section>
-    </main>
+      <div class="card">
+        <img src="bilder/20250615_1655_Winter Battle Encounter_remix.jpg" alt="Winter Battle" />
+        <h3>Winter Battle</h3>
+        <a href="#" class="btn">Kaufen</a>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 Kurt's Galerie</p>
-    </footer>
+    </section>
+
+    <section class="kontakt">
+      <h2>Kontakt</h2>
+      <p>Interesse an einem Bild? Schreib mir gern eine Nachricht:</p>
+      <form action="mailto:dein@email.de" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Dein Name" required />
+        <input type="email" name="email" placeholder="Deine E-Mail" required />
+        <textarea name="nachricht" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Von Kurt's Galerie</p>
+  </footer>
 </body>
 </html>
