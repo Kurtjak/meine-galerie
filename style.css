@@ -1,4 +1,42 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bild {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+body {
   margin: 0;
   font-family: sans-serif;
   background: linear-gradient(to bottom, #5f6bc1, #a84fcb);
