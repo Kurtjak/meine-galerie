@@ -1,105 +1,109 @@
+/* Grundlayout */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #8e2de2, #4a00e0);
-  color: #fff;
+  background: linear-gradient(to bottom, #ff2e9e, #7d3cff);
+  color: white;
+  text-align: center;
 }
 
 header {
-  text-align: center;
   padding: 2rem;
-  background: linear-gradient(to right, #8e2de2, #ff0080);
 }
 
-header h1 {
+h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
-main {
+.galerie {
   padding: 2rem;
 }
 
-h2 {
-  text-align: center;
-  color: #ffb3ff;
-  margin-bottom: 1.5rem;
-}
-
-.gallery {
+.bilder-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
-.card {
-  background-color: rgba(0, 0, 0, 0.4);
+.bild-box {
+  background-color: #2c024d;
   padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   max-width: 250px;
-  box-shadow: 0 0 10px #000;
+  width: 90%;
 }
 
-.card img {
-  max-width: 100%;
-  border-radius: 0.5rem;
+.bild-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.card h3 {
-  margin: 1rem 0;
+.bild-box h3 {
+  margin-top: 1rem;
 }
 
-.btn {
-  display: inline-block;
+.bild-box button {
+  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #ff00cc;
+  background-color: #ff00aa;
+  border: none;
   color: white;
-  border-radius: 0.5rem;
-  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
 }
 
 .kontakt {
-  margin-top: 4rem;
+  background-color: #5a00b3;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .kontakt form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  max-width: 500px;
+  margin: auto;
 }
 
 .kontakt input,
 .kontakt textarea {
-  padding: 0.75rem;
+  width: 100%;
+  padding: 0.7rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 .kontakt button {
-  padding: 0.75rem;
-  background: #ff00cc;
-  color: white;
+  background-color: #ff00aa;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
+  font-weight: bold;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #1c003d;
-  color: #aaa;
-  margin-top: 3rem;
-} 
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .bilder-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bild-box {
+    max-width: 90%;
+  }
+}
 
 .
