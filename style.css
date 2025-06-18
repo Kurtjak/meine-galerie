@@ -1,67 +1,71 @@
 body {
-  background-color: #e288d8;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e288d8, #f9dce1);
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+header {
+  background-color: #c254c7;
+  padding: 30px 0;
   text-align: center;
 }
 
-h1 {
+header h1 {
   color: white;
-  padding: 20px;
+  margin: 0;
+  font-size: 36px;
 }
 
 .galerie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .bild-block {
   background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  width: 80%;
-  max-width: 600px;
-  padding: 20px;
-  transition: transform 0.3s;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bild-block:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .bild-block img {
   width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: box-shadow 0.3s;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
 }
 
-.bild-block img:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-h2 {
-  margin: 15px 0 10px;
-  font-size: 24px;
+.bild-block h2 {
+  font-size: 22px;
+  margin: 16px 0 8px;
   color: #333;
 }
 
-button {
+.bild-block button {
+  margin-bottom: 16px;
   padding: 10px 20px;
-  font-size: 16px;
   background-color: #7af56e;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
+.bild-block button:hover {
   background-color: #63d85b;
 }
+
 
 
