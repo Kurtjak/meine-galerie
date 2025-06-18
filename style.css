@@ -1,6 +1,6 @@
 body {
+  background-color: #e288d8;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #cc66cc, #ffccff);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -8,7 +8,7 @@ body {
 
 h1 {
   color: white;
-  margin: 30px 0;
+  padding: 20px;
 }
 
 .galerie {
@@ -16,15 +16,52 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 20px;
+  padding-bottom: 50px;
 }
 
 .bild-block {
   background-color: white;
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 90%;
-  transition: transform 0.3s eas
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.bild-block:hover {
+  transform: scale(1.02);
+}
+
+.bild-block img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.bild-block img:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  margin: 15px 0 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7af56e;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #63d85b;
+}
+
 
