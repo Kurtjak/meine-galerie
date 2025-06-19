@@ -1,78 +1,83 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Willkommen in meiner Bilderwelt</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    #lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-  </style>
-</head>
-<body>
+/* Grund-Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
-  <header class="hero">
-    <h1>Willkommen in meiner<br>Bilderwelt</h1>
-    <div class="buttons">
-      <a href="#galerie" class="btn">Zur Galerie</a>
-      <a href="https://wise.com" class="btn">Spenden über Wise</a>
-      <a href="mailto:deine@email.de" class="btn">Kontakt</a>
-    </div>
-  </header>
+/* Hero-Bereich */
+.hero {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  <section id="galerie">
-    <div class="gallery">
-      <!-- Bildergalerie -->
-      <!-- Automatisch generierter Block pro Bild -->
-      <!-- Du kannst diesen Bereich mit weiteren Bildern erweitern -->
-      <script>
-        const bilder = [
-          "Bunt.jpg", "Ein Weg ins Dorf.jpg", "Fischbot.jpg", "Mondpfat.jpg",
-          "Monets Garten.png", "Paris in nachts Lict.png", "Renesans.png", "Retro.jpg",
-          "Sonnenuntergang.jpg", "Spaniesche Dorf.jpg", "Venedig.png", "Winter Battle.png",
-          "Yacht Club.jpg", "x.png"
-        ];
-        const gallery = document.write(bilder.map(name => `
-          <div class="image-container">
-            <img src="${name}" alt="${name.split('.')[0]}" onclick="openLightbox(this)">
-            <p class="title">${name.split('.')[0]}</p>
-            <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-          </div>
-        `).join(''));
-      </script>
-    </div>
-  </section>
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-  <div id="lightbox">
-    <img id="lightbox-img" />
-  </div>
+.buttons {
+  margin-top: 20px;
+}
 
-  <script>
-    function openLightbox(img) {
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("lightbox").style.display = "flex";
-    }
-    document.getElementById("lightbox").onclick = function () {
-      this.style.display = "none";
-    };
-  </script>
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #2a5298;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
 
-</body>
-</html>
+.btn:hover {
+  background-color: #2a5298;
+  color: #fff;
+}
+
+/* Galerie-Bereich */
+#galerie {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.image-container {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
 
 
 
