@@ -6,21 +6,26 @@ body {
   color: #333;
 }
 
-/* Hero-Bereich mit Hintergrundbild */
+/* Hero-Bereich mit Meer bei Dämmerung */
 .hero {
   height: 100vh;
-  background: url("04f1da6c-7792-4844-8d66-74073a92fa4c.png") center center/cover no-repeat;
+  background: url("meer-daemmerung.jpg") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  position: relative;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.hero-content {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .buttons {
@@ -31,7 +36,7 @@ body {
 }
 
 .btn {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 12px 25px;
   border-radius: 30px;
@@ -41,10 +46,10 @@ body {
 }
 
 .btn:hover {
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
-/* Galerie-Stil */
+/* Galerie */
 #galerie {
   padding: 60px 20px;
   max-width: 1200px;
@@ -86,7 +91,8 @@ body {
 #lightbox {
   display: none;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -99,6 +105,7 @@ body {
   max-width: 90%;
   max-height: 90%;
 }
+
 
 
 
