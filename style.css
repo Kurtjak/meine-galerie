@@ -1,128 +1,89 @@
-/* Allgemein */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  scroll-behavior: smooth;
-  background-color: #f0f0f0;
+/* Grundstil */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#e6e6e6, #dcdcdc);
 }
 
-/* Startseite */
+/* Header-Startseite */
 .hero {
-  background: url('bunt.jpg') no-repeat center center/cover;
-  height: 100vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
+    background: url('038d982e-f710-44a5-b0b3-715a7808c275.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 3em;
-  margin-bottom: 30px;
-  text-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-
-.btn {
-  background-color: rgba(0, 70, 120, 0.85);
-  color: white;
-  padding: 12px 25px;
-  margin: 10px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: rgba(0, 50, 90, 0.95);
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
 }
 
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* Galerie */
+.btn {
+    background-color: rgba(0, 0, 50, 0.6);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 80, 0.8);
+}
+
+/* Galerie-Stil */
 .galerie {
-  background: url('bunt.jpg') no-repeat center center/cover;
-  padding: 50px 20px;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.bilder-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    background: url('24daaf27-c071-45e1-85a9-e278de1efdbc.png') center/cover fixed;
+    min-height: 100vh;
 }
 
 .bild-container {
-  background: rgba(255,255,255,0.05);
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  backdrop-filter: blur(3px);
+    text-align: center;
 }
 
 .bild-container img {
-  width: 100%;
-  border: 6px solid #D4AF37;
-  border-radius: 6px;
+    width: 100%;
+    height: auto;
+    border: 8px solid #d4af37; /* Alt-Gold */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .bild-container p {
-  margin: 12px 0 8px;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+    color: #333;
 }
 
-.bild-container button {
-  background: darkgoldenrod;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.kaufen-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.bild-container button:hover {
-  background: goldenrod;
+.kaufen-btn:hover {
+    background-color: #222;
 }
 
-.like {
-  margin-top: 8px;
-  color: white;
-  cursor: pointer;
-  font-size: 1.2em;
-  user-select: none;
-  transition: transform 0.2s;
-}
-
-.like:hover {
-  transform: scale(1.2);
-}
-
-/* Responsiv */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2em;
-  }
-
-  .btn {
-    padding: 10px 18px;
-    font-size: 0.95rem;
-  }
-}
 
 
 
