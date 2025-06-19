@@ -1,52 +1,64 @@
-/* Grundlayout */
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   color: #333;
 }
 
-/* Hero-Bereich mit Hintergrundbild */
+/* Hero-Bereich */
 .hero {
+  background-image: url('04f1da6c-7792-4844-8d66-74073a92fa4c.png');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  background: url("04f1da6c-7792-4844-8d66-74073a92fa4c.png") center center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  margin-top: 20px;
 }
 
 .btn {
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2a5298;
   text-decoration: none;
+  border-radius: 30px;
+  margin: 5px;
+  transition: all 0.3s ease;
   font-weight: bold;
-  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: rgba(0,0,0,0.85);
+  background-color: #2a5298;
+  color: #fff;
 }
 
-/* Galerie-Stil */
+/* Galerie */
 #galerie {
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
 }
@@ -99,6 +111,7 @@ body {
   max-width: 90%;
   max-height: 90%;
 }
+
 
 
 
