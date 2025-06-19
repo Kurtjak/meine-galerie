@@ -1,138 +1,117 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Galerie</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1 id="headline">Willkommen in meiner Bilderwelt</h1>
-    <nav>
-      <button onclick="zeigeGalerie()">
-        <span id="galerieBtn">Zur Galerie</span>
-      </button>
-      <button onclick="window.open('https://wise.com','_blank')">
-        <span id="spendeBtn">Spenden über Wise</span>
-      </button>
-      <button onclick="document.getElementById('kontakt').scrollIntoView()">
-        <span id="kontaktBtn">Kontakt</span>
-      </button>
-      <select onchange="spracheWechseln(this.value)">
-        <option value="de">Deutsch</option>
-        <option value="en">English</option>
-      </select>
-    </nav>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: url('ruhiges-meer.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
-  <main id="galerie" style="display:none;">
-    <div class="bild-block">
-      <a href="Bunt.jpg" target="_blank">
-        <img src="Bunt.jpg" alt="Bunt">
-      </a>
-      <p>Bunt</p>
-    </div>
-    <div class="bild-block">
-      <a href="Ein Weg ins Dorf.jpg" target="_blank">
-        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf">
-      </a>
-      <p>Ein Weg ins Dorf</p>
-    </div>
-    <div class="bild-block">
-      <a href="Fischbot.jpg" target="_blank">
-        <img src="Fischbot.jpg" alt="Fischbot">
-      </a>
-      <p>Fischbot</p>
-    </div>
-    <div class="bild-block">
-      <a href="Mondpfat.jpg" target="_blank">
-        <img src="Mondpfat.jpg" alt="Mondpfat">
-      </a>
-      <p>Mondpfat</p>
-    </div>
-    <div class="bild-block">
-      <a href="Retro.jpg" target="_blank">
-        <img src="Retro.jpg" alt="Retro">
-      </a>
-      <p>Retro</p>
-    </div>
-    <div class="bild-block">
-      <a href="Sonnenuntergang.jpg" target="_blank">
-        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang">
-      </a>
-      <p>Sonnenuntergang</p>
-    </div>
-    <div class="bild-block">
-      <a href="Spaniesche Dorf.jpg" target="_blank">
-        <img src="Spaniesche Dorf.jpg" alt="Spanisches Dorf">
-      </a>
-      <p>Spanisches Dorf</p>
-    </div>
-    <div class="bild-block">
-      <a href="Winter Battle Encounter.jpg" target="_blank">
-        <img src="Winter Battle Encounter.jpg" alt="Winter Battle">
-      </a>
-      <p>Winter Battle</p>
-    </div>
-    <div class="bild-block">
-      <a href="Yacht Club.jpg" target="_blank">
-        <img src="Yacht Club.jpg" alt="Yacht Club">
-      </a>
-      <p>Yacht Club</p>
-    </div>
-    <div class="bild-block">
-      <a href="ruhiges-meer.jpg" target="_blank">
-        <img src="ruhiges-meer.jpg" alt="Hintergrund Meer">
-      </a>
-      <p>Meer & Himmel</p>
-    </div>
-  </main>
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+}
 
-  <footer id="kontakt">
-    <h2 id="kontaktTitel">Kontakt</h2>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="E-Mail" required>
-      <textarea placeholder="Nachricht..." rows="4" required></textarea>
-      <button type="submit">Senden</button>
-    </form>
-    <p class="email-hinweis">Oder direkt an: <strong>kesarkurt@gmail.com</strong></p>
-    <a class="spenden-button" href="https://wise.com" target="_blank">Spenden (freiwillig für meine Arbeit)</a>
-  </footer>
+nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightblue;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  <script>
-    function zeigeGalerie() {
-      document.getElementById('galerie').style.display = 'flex';
-    }
+h1 {
+  font-size: 2.5em;
+}
 
-    function spracheWechseln(sprache) {
-      const texte = {
-        de: {
-          headline: "Willkommen in meiner Bilderwelt",
-          galerieBtn: "Zur Galerie",
-          spendeBtn: "Spenden über Wise",
-          kontaktBtn: "Kontakt",
-          kontaktTitel: "Kontakt",
-        },
-        en: {
-          headline: "Welcome to my world of images",
-          galerieBtn: "To Gallery",
-          spendeBtn: "Donate via Wise",
-          kontaktBtn: "Contact",
-          kontaktTitel: "Contact",
-        }
-      };
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background: url('galerie-hintergrund.jpg') repeat;
+  background-size: cover;
+}
 
-      document.getElementById('headline').textContent = texte[sprache].headline;
-      document.getElementById('galerieBtn').textContent = texte[sprache].galerieBtn;
-      document.getElementById('spendeBtn').textContent = texte[sprache].spendeBtn;
-      document.getElementById('kontaktBtn').textContent = texte[sprache].kontaktBtn;
-      document.getElementById('kontaktTitel').textContent = texte[sprache].kontaktTitel;
-    }
-  </script>
-</body>
-</html>
+.bild-block {
+  text-align: center;
+  border: 10px solid #bfa76f;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 8px ridge #e6c17b;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+.kaufen-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: gold;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 80%;
+  max-width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.spenden-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 10px;
+  background-color: #8bc34a;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.email-hinweis {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 
 
 
