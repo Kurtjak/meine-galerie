@@ -1,73 +1,139 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Bildergalerie</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Galerie</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1 id="title" data-de="Meine Bildergalerie" data-en="My Art Gallery">Meine Bildergalerie</h1>
+    <h1 id="headline">Willkommen in meiner Bilderwelt</h1>
     <nav>
-      <button onclick="scrollToSection('galerie')">Galerie</button>
-      <button onclick="scrollToSection('kontakt')">Kontakt</button>
-      <button onclick="scrollToSection('spende')">Spenden</button>
-      <select id="language-switcher" onchange="switchLanguage(this.value)">
+      <button onclick="zeigeGalerie()">
+        <span id="galerieBtn">Zur Galerie</span>
+      </button>
+      <button onclick="window.open('https://wise.com','_blank')">
+        <span id="spendeBtn">Spenden über Wise</span>
+      </button>
+      <button onclick="document.getElementById('kontakt').scrollIntoView()">
+        <span id="kontaktBtn">Kontakt</span>
+      </button>
+      <select onchange="spracheWechseln(this.value)">
         <option value="de">Deutsch</option>
         <option value="en">English</option>
       </select>
     </nav>
   </header>
 
-  <main id="galerie">
-    <!-- Bilder-Galerie -->
-    <div class="bild-block"><a href="Bunt.jpg" target="_blank"><img src="Bunt.jpg" alt="Bunt" /></a><h2 data-de="Bunt" data-en="Colorful">Bunt</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="Retro.jpg" target="_blank"><img src="Retro.jpg" alt="Retro" /></a><h2 data-de="Retro" data-en="Retro">Retro</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="RetroVision.jpg" target="_blank"><img src="RetroVision.jpg" alt="Retro Vision" /></a><h2 data-de="Retro Vision" data-en="Retro Vision">Retro Vision</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="RetroVision2.jpg" target="_blank"><img src="RetroVision2.jpg" alt="Retro Vision 2" /></a><h2 data-de="Retro Vision 2" data-en="Retro Vision 2">Retro Vision 2</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="WinterBattle.jpg" target="_blank"><img src="WinterBattle.jpg" alt="Winter Battle" /></a><h2 data-de="Winter Battle" data-en="Winter Battle">Winter Battle</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="Waldmoment.jpg" target="_blank"><img src="Waldmoment.jpg" alt="Waldmoment" /></a><h2 data-de="Waldmoment" data-en="Forest Moment">Waldmoment</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="Schattenlicht.jpg" target="_blank"><img src="Schattenlicht.jpg" alt="Schattenlicht" /></a><h2 data-de="Schattenlicht" data-en="Shadow Light">Schattenlicht</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="AlteStrasse.jpg" target="_blank"><img src="AlteStrasse.jpg" alt="Alte Straße" /></a><h2 data-de="Alte Straße" data-en="Old Street">Alte Straße</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
-    <div class="bild-block"><a href="WeiteSicht.jpg" target="_blank"><img src="WeiteSicht.jpg" alt="Weite Sicht" /></a><h2 data-de="Weite Sicht" data-en="Wide View">Weite Sicht</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+  <main id="galerie" style="display:none;">
+    <div class="bild-block">
+      <a href="Bunt.jpg" target="_blank">
+        <img src="Bunt.jpg" alt="Bunt">
+      </a>
+      <p>Bunt</p>
+    </div>
+    <div class="bild-block">
+      <a href="Ein Weg ins Dorf.jpg" target="_blank">
+        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf">
+      </a>
+      <p>Ein Weg ins Dorf</p>
+    </div>
+    <div class="bild-block">
+      <a href="Fischbot.jpg" target="_blank">
+        <img src="Fischbot.jpg" alt="Fischbot">
+      </a>
+      <p>Fischbot</p>
+    </div>
+    <div class="bild-block">
+      <a href="Mondpfat.jpg" target="_blank">
+        <img src="Mondpfat.jpg" alt="Mondpfat">
+      </a>
+      <p>Mondpfat</p>
+    </div>
+    <div class="bild-block">
+      <a href="Retro.jpg" target="_blank">
+        <img src="Retro.jpg" alt="Retro">
+      </a>
+      <p>Retro</p>
+    </div>
+    <div class="bild-block">
+      <a href="Sonnenuntergang.jpg" target="_blank">
+        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang">
+      </a>
+      <p>Sonnenuntergang</p>
+    </div>
+    <div class="bild-block">
+      <a href="Spaniesche Dorf.jpg" target="_blank">
+        <img src="Spaniesche Dorf.jpg" alt="Spanisches Dorf">
+      </a>
+      <p>Spanisches Dorf</p>
+    </div>
+    <div class="bild-block">
+      <a href="Winter Battle Encounter.jpg" target="_blank">
+        <img src="Winter Battle Encounter.jpg" alt="Winter Battle">
+      </a>
+      <p>Winter Battle</p>
+    </div>
+    <div class="bild-block">
+      <a href="Yacht Club.jpg" target="_blank">
+        <img src="Yacht Club.jpg" alt="Yacht Club">
+      </a>
+      <p>Yacht Club</p>
+    </div>
+    <div class="bild-block">
+      <a href="ruhiges-meer.jpg" target="_blank">
+        <img src="ruhiges-meer.jpg" alt="Hintergrund Meer">
+      </a>
+      <p>Meer & Himmel</p>
+    </div>
   </main>
 
-  <section id="spende">
-    <h2 data-de="Spenden" data-en="Donate">Spenden</h2>
-    <p data-de="Unterstütze meine Galerie freiwillig für meine Arbeit." data-en="Support my gallery voluntarily for my work.">Unterstütze meine Galerie freiwillig für meine Arbeit.</p>
-    <a class="spenden-button" href="#" target="_blank" data-de="Jetzt auf Wise spenden" data-en="Donate now on Wise">Jetzt auf Wise spenden</a>
-    <p><em data-de="Spenden-Link wird später hinzugefügt" data-en="Donation link will be added later">Spenden-Link wird später hinzugefügt</em></p>
-  </section>
-
   <footer id="kontakt">
-    <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
-    <p data-de="Interesse an einem Bild? Schreib mir gern eine Nachricht:" data-en="Interested in a painting? Feel free to send me a message:">Interesse an einem Bild? Schreib mir gern eine Nachricht:</p>
+    <h2 id="kontaktTitel">Kontakt</h2>
     <form>
-      <input type="text" placeholder="Dein Name / Your Name" required />
-      <input type="email" placeholder="Deine E-Mail / Your Email" required />
-      <textarea placeholder="Deine Nachricht / Your Message" required></textarea>
-      <button type="submit" data-de="Senden" data-en="Send">Senden</button>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="E-Mail" required>
+      <textarea placeholder="Nachricht..." rows="4" required></textarea>
+      <button type="submit">Senden</button>
     </form>
-    <p class="email-hinweis">
-      <span data-de="Oder sende mir direkt eine E-Mail an:" data-en="Or email me directly at:">Oder sende mir direkt eine E-Mail an:</span>
-      <a href="mailto:kesarkurt@gmail.com">kesarkurt@gmail.com</a>
-    </p>
+    <p class="email-hinweis">Oder direkt an: <strong>kesarkurt@gmail.com</strong></p>
+    <a class="spenden-button" href="https://wise.com" target="_blank">Spenden (freiwillig für meine Arbeit)</a>
   </footer>
 
   <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    function zeigeGalerie() {
+      document.getElementById('galerie').style.display = 'flex';
     }
 
-    function switchLanguage(lang) {
-      document.querySelectorAll('[data-de]').forEach(el => {
-        el.textContent = el.dataset[lang];
-      });
+    function spracheWechseln(sprache) {
+      const texte = {
+        de: {
+          headline: "Willkommen in meiner Bilderwelt",
+          galerieBtn: "Zur Galerie",
+          spendeBtn: "Spenden über Wise",
+          kontaktBtn: "Kontakt",
+          kontaktTitel: "Kontakt",
+        },
+        en: {
+          headline: "Welcome to my world of images",
+          galerieBtn: "To Gallery",
+          spendeBtn: "Donate via Wise",
+          kontaktBtn: "Contact",
+          kontaktTitel: "Contact",
+        }
+      };
+
+      document.getElementById('headline').textContent = texte[sprache].headline;
+      document.getElementById('galerieBtn').textContent = texte[sprache].galerieBtn;
+      document.getElementById('spendeBtn').textContent = texte[sprache].spendeBtn;
+      document.getElementById('kontaktBtn').textContent = texte[sprache].kontaktBtn;
+      document.getElementById('kontaktTitel').textContent = texte[sprache].kontaktTitel;
     }
   </script>
 </body>
 </html>
+
 
 
 
