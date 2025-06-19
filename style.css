@@ -1,5 +1,4 @@
 /* Grund-Reset */
-* /* Allgemeines Layout */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -92,12 +91,6 @@ body {
   z-index: 1000;
 }
 
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
 
 
 
