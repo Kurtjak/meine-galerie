@@ -1,88 +1,73 @@
-/* Grundstil */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(#e6e6e6, #dcdcdc);
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine Galerie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* Header-Startseite */
-.hero {
-    background: url('038d982e-f710-44a5-b0b3-715a7808c275.png') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
+  <header class="hero">
+    <h1>Willkommen in meiner<br>Bilderwelt</h1>
+    <div class="buttons">
+      <a href="#galerie" class="btn">Zur Galerie</a>
+      <a href="https://wise.com" class="btn">Spenden über Wise</a>
+      <a href="mailto:deine@email.de" class="btn">Kontakt</a>
+    </div>
+  </header>
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
-}
+  <section id="galerie" class="galerie">
+    <div class="bild-container">
+      <img src="Bunt.jpg" alt="Bunt" />
+      <p>Bunt</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" />
+      <p>Ein Weg ins Dorf</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Fischbot.jpg" alt="Fischbot" />
+      <p>Fischbot</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Mondpfat.jpg" alt="Mondpfat" />
+      <p>Mondpfat</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Retro.jpg" alt="Retro" />
+      <p>Retro</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" />
+      <p>Sonnenuntergang</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" />
+      <p>Spanisches Dorf</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter" />
+      <p>Winter Battle Encounter</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+    <div class="bild-container">
+      <img src="Yacht Club.jpg" alt="Yacht Club" />
+      <p>Yacht Club</p>
+      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+    </div>
+  </section>
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
+</body>
+</html>
 
-.btn {
-    background-color: rgba(0, 0, 50, 0.6);
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: rgba(0, 0, 80, 0.8);
-}
-
-/* Galerie-Stil */
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 40px;
-    background: url('24daaf27-c071-45e1-85a9-e278de1efdbc.png') center/cover fixed;
-    min-height: 100vh;
-}
-
-.bild-container {
-    text-align: center;
-}
-
-.bild-container img {
-    width: 100%;
-    height: auto;
-    border: 8px solid #d4af37; /* Alt-Gold */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.bild-container p {
-    margin: 10px 0 5px;
-    font-size: 1.1em;
-    color: #333;
-}
-
-.kaufen-btn {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 10px 20px;
-    background-color: #444;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.kaufen-btn:hover {
-    background-color: #222;
-}
 
 
 
