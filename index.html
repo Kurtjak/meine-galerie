@@ -4,35 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Willkommen in meiner Bilderwelt</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Optional: Basis-Styles für Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Hero-Bereich -->
   <header class="hero">
-    <h1>Willkommen in meiner<br>Bilderwelt</h1>
-    <div class="buttons">
-      <a href="#galerie" class="btn">Zur Galerie</a>
-      <a href="https://wise.com" class="btn">Spenden über Wise</a>
-      <a href="mailto:deine@email.de" class="btn">Kontakt</a>
+    <div class="hero-content">
+      <h1>Willkommen in meiner<br>Bilderwelt</h1>
+      <div class="buttons">
+        <a href="#galerie" class="btn">Zur Galerie</a>
+        <a href="https://wise.com" class="btn">Spenden über Wise</a>
+        <a href="mailto:deine@email.de" class="btn">Kontakt</a>
+      </div>
     </div>
   </header>
 
@@ -40,14 +24,13 @@
   <section id="galerie">
     <div class="gallery">
 
-      <!-- Beispielbild mit Lightbox -->
+      <!-- Beispielbilder -->
       <div class="image-container">
         <img src="Bunt.jpg" alt="Bunt" onclick="openLightbox(this)">
         <p class="title">Bunt</p>
         <a href="mailto:deine@email.de" class="btn">Kaufen</a>
       </div>
 
-      <!-- Weitere Bilder -->
       <div class="image-container">
         <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" onclick="openLightbox(this)">
         <p class="title">Ein Weg ins Dorf</p>
@@ -104,12 +87,13 @@
     <img id="lightbox-img" />
   </div>
 
-  <!-- Lightbox JavaScript -->
+  <!-- Lightbox Script -->
   <script>
     function openLightbox(img) {
       document.getElementById("lightbox-img").src = img.src;
       document.getElementById("lightbox").style.display = "flex";
     }
+
     document.getElementById("lightbox").onclick = function () {
       this.style.display = "none";
     };
@@ -117,6 +101,7 @@
 
 </body>
 </html>
+
 
 
   
