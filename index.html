@@ -3,34 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Galerie</title>
+  <title>Meine Bildergalerie</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🎨 Meine Galerie / My Gallery</h1>
-    <p>Willkommen in meiner Kunstwelt! / Welcome to my art world!</p>
+    <h1 id="title" data-de="Meine Bildergalerie" data-en="My Art Gallery">Meine Bildergalerie</h1>
+    <nav>
+      <button onclick="scrollToSection('galerie')">Galerie</button>
+      <button onclick="scrollToSection('kontakt')">Kontakt</button>
+      <button onclick="scrollToSection('spende')">Spenden</button>
+      <select id="language-switcher" onchange="switchLanguage(this.value)">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+      </select>
+    </nav>
   </header>
 
-  <main class="gallery">
-    <!-- Bildliste -->
-    <div class="image-card"><a href="Bunt.jpg" target="_blank"><img src="Bunt.jpg" alt="Bunt" /></a><h2>Bunt</h2></div>
-    <div class="image-card"><a href="Ein Weg ins Dorf.jpg" target="_blank"><img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" /></a><h2>Ein Weg ins Dorf</h2></div>
-    <div class="image-card"><a href="Fischbot.jpg" target="_blank"><img src="Fischbot.jpg" alt="Fischbot" /></a><h2>Fischbot</h2></div>
-    <div class="image-card"><a href="Mondpfat.jpg" target="_blank"><img src="Mondpfat.jpg" alt="Mondpfat" /></a><h2>Mondpfad</h2></div>
-    <div class="image-card"><a href="Retro.jpg" target="_blank"><img src="Retro.jpg" alt="Retro" /></a><h2>Retro</h2></div>
-    <div class="image-card"><a href="Sonnenuntergang.jpg" target="_blank"><img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" /></a><h2>Sonnenuntergang</h2></div>
-    <div class="image-card"><a href="Spaniesche Dorf.jpg" target="_blank"><img src="Spaniesche Dorf.jpg" alt="Spanisches Dorf" /></a><h2>Spanisches Dorf</h2></div>
-    <div class="image-card"><a href="Winter Battle Encounter.jpg" target="_blank"><img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter" /></a><h2>Winter Battle</h2></div>
-    <div class="image-card"><a href="Yacht Club.jpg" target="_blank"><img src="Yacht Club.jpg" alt="Yacht Club" /></a><h2>Yacht Club</h2></div>
-
-    <!-- Optional: Falls noch ein Bild hinzukommt -->
-    <!-- <div class="image-card"><a href="NAME.jpg" target="_blank"><img src="NAME.jpg" alt="..." /></a><h2>Titel</h2></div> -->
+  <main id="galerie">
+    <!-- Bilder-Galerie -->
+    <div class="bild-block"><a href="Bunt.jpg" target="_blank"><img src="Bunt.jpg" alt="Bunt" /></a><h2 data-de="Bunt" data-en="Colorful">Bunt</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="Retro.jpg" target="_blank"><img src="Retro.jpg" alt="Retro" /></a><h2 data-de="Retro" data-en="Retro">Retro</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="RetroVision.jpg" target="_blank"><img src="RetroVision.jpg" alt="Retro Vision" /></a><h2 data-de="Retro Vision" data-en="Retro Vision">Retro Vision</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="RetroVision2.jpg" target="_blank"><img src="RetroVision2.jpg" alt="Retro Vision 2" /></a><h2 data-de="Retro Vision 2" data-en="Retro Vision 2">Retro Vision 2</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="WinterBattle.jpg" target="_blank"><img src="WinterBattle.jpg" alt="Winter Battle" /></a><h2 data-de="Winter Battle" data-en="Winter Battle">Winter Battle</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="Waldmoment.jpg" target="_blank"><img src="Waldmoment.jpg" alt="Waldmoment" /></a><h2 data-de="Waldmoment" data-en="Forest Moment">Waldmoment</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="Schattenlicht.jpg" target="_blank"><img src="Schattenlicht.jpg" alt="Schattenlicht" /></a><h2 data-de="Schattenlicht" data-en="Shadow Light">Schattenlicht</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="AlteStrasse.jpg" target="_blank"><img src="AlteStrasse.jpg" alt="Alte Straße" /></a><h2 data-de="Alte Straße" data-en="Old Street">Alte Straße</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
+    <div class="bild-block"><a href="WeiteSicht.jpg" target="_blank"><img src="WeiteSicht.jpg" alt="Weite Sicht" /></a><h2 data-de="Weite Sicht" data-en="Wide View">Weite Sicht</h2><button data-de="Kaufen" data-en="Buy">Kaufen</button></div>
   </main>
 
-  <section class="donate">
-    <p>💖 <strong>Freiwillig für meine Arbeit spenden / Donate voluntarily for my work</strong></p>
-    <a href="mailto:kesarkurt@gmail.com?subject=Spende%20für%20Gale
+  <section id="spende">
+    <h2 data-de="Spenden" data-en="Donate">Spenden</h2>
+    <p data-de="Unterstütze meine Galerie freiwillig für meine Arbeit." data-en="Support my gallery voluntarily for my work.">Unterstütze meine Galerie freiwillig für meine Arbeit.</p>
+    <a class="spenden-button" href="#" target="_blank" data-de="Jetzt auf Wise spenden" data-en="Donate now on Wise">Jetzt auf Wise spenden</a>
+    <p><em data-de="Spenden-Link wird später hinzugefügt" data-en="Donation link will be added later">Spenden-Link wird später hinzugefügt</em></p>
+  </section>
+
+  <footer id="kontakt">
+    <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
+    <p data-de="Interesse an einem Bild? Schreib mir gern eine Nachricht:" data-en="Interested in a painting? Feel free to send me a message:">Interesse an einem Bild? Schreib mir gern eine Nachricht:</p>
+    <form>
+      <input type="text" placeholder="Dein Name / Your Name" required />
+      <input type="email" placeholder="Deine E-Mail / Your Email" required />
+      <textarea placeholder="Deine Nachricht / Your Message" required></textarea>
+      <button type="submit" data-de="Senden" data-en="Send">Senden</button>
+    </form>
+    <p class="email-hinweis">
+      <span data-de="Oder sende mir direkt eine E-Mail an:" data-en="Or email me directly at:">Oder sende mir direkt eine E-Mail an:</span>
+      <a href="mailto:kesarkurt@gmail.com">kesarkurt@gmail.com</a>
+    </p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-de]').forEach(el => {
+        el.textContent = el.dataset[lang];
+      });
+    }
+  </script>
+</body>
+</html>
+
 
 
 
