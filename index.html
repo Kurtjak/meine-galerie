@@ -2,58 +2,62 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Willkommen in meiner Bilderwelt</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Hero / Willkommensbereich -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Willkommen in meiner<br>Bilderwelt</h1>
-      <div class="buttons">
-        <a href="#galerie" class="btn">Zur Galerie</a>
-        <a href="https://wise.com" class="btn" target="_blank">Spenden über Wise</a>
-        <a href="mailto:deine@email.de" class="btn">Kontakt</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Galerie-Bereich -->
-  <section id="galerie">
-    <div class="gallery">
-
-      <!-- Beispielbilder -->
-      <div class="image-container">
-        <img src="Bunt.jpg" alt="Bunt" onclick="openLightbox(this)">
-        <p class="title">Bunt</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <!-- Weitere Bilder kannst du hier hinzufügen -->
-
-    </div>
-  </section>
-
-  <!-- Lightbox Modal -->
-  <div id="lightbox">
-    <img id="lightbox-img" />
-  </div>
-
-  <!-- Lightbox JavaScript -->
-  <script>
-    function openLightbox(img) {
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("lightbox").style.display = "flex";
+  <style>
+    /* Grund-Reset */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
-    document.getElementById("lightbox").onclick = function () {
-      this.style.display = "none";
-    };
-  </script>
 
-</body>
-</html>
+    /* Hero-Bereich */
+    .hero {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #2a5298;
+      text-decoration: none;
+      border-radius: 30px;
+      margin: 5px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #2a5298;
+      color: #fff;
+    }
+
+    /* Galerie-Bereich */
+    #galerie {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(
+
 
 
 
