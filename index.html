@@ -2,12 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Galerie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willkommen in meiner Bilderwelt</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Optional: Basis-Styles für Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Hero-Bereich -->
   <header class="hero">
     <h1>Willkommen in meiner<br>Bilderwelt</h1>
     <div class="buttons">
@@ -17,74 +36,88 @@
     </div>
   </header>
 
-  <section id="galerie" class="galerie">
-    <div class="bild-container">
-      <img src="Bunt.jpg" alt="Bunt" />
-      <p>Bunt</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" />
-      <p>Ein Weg ins Dorf</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Fischbot.jpg" alt="Fischbot" />
-      <p>Fischbot</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Mondpfat.jpg" alt="Mondpfat" />
-      <p>Mondpfat</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Retro.jpg" alt="Retro" />
-      <p>Retro</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" />
-      <p>Sonnenuntergang</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" />
-      <p>Spanisches Dorf</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter" />
-      <p>Winter Battle Encounter</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-    </div>
-    <div class="bild-container">
-      <img src="Yacht Club.jpg" alt="Yacht Club" />
-      <p>Yacht Club</p>
-      <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+  <!-- Galerie-Bereich -->
+  <section id="galerie">
+    <div class="gallery">
+
+      <!-- Beispielbild mit Lightbox -->
+      <div class="image-container">
+        <img src="Bunt.jpg" alt="Bunt" onclick="openLightbox(this)">
+        <p class="title">Bunt</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <!-- Weitere Bilder -->
+      <div class="image-container">
+        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" onclick="openLightbox(this)">
+        <p class="title">Ein Weg ins Dorf</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Fischbot.jpg" alt="Fischbot" onclick="openLightbox(this)">
+        <p class="title">Fischbot</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Mondpfat.jpg" alt="Mondpfat" onclick="openLightbox(this)">
+        <p class="title">Mondpfat</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Retro.jpg" alt="Retro" onclick="openLightbox(this)">
+        <p class="title">Retro</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" onclick="openLightbox(this)">
+        <p class="title">Sonnenuntergang</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" onclick="openLightbox(this)">
+        <p class="title">Spanisches Dorf</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter" onclick="openLightbox(this)">
+        <p class="title">Winter Battle Encounter</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
+      <div class="image-container">
+        <img src="Yacht Club.jpg" alt="Yacht Club" onclick="openLightbox(this)">
+        <p class="title">Yacht Club</p>
+        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
+      </div>
+
     </div>
   </section>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox">
+    <img id="lightbox-img" />
+  </div>
+
+  <!-- Lightbox JavaScript -->
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    document.getElementById("lightbox").onclick = function () {
+      this.style.display = "none";
+    };
+  </script>
+
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Galerie</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
 
-  <header class="hero">
-    <h1>Willkommen in meiner<br>Bilderwelt</h1>
-    <div class="buttons">
-      <a href="#galerie" class="btn">Zur Galerie</a>
-      <a href="https://wise.com" class="btn" target="_blank">Spenden über Wise</a>
-      <a href="mailto:deine@email.de" class="btn">Kontakt</a>
-    </div>
-  </header>
 
   
 
