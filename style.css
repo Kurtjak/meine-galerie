@@ -1,107 +1,139 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom, #ffffff, #eaeaea);
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Galerie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="headline">Willkommen in meiner Bilderwelt</h1>
+    <nav>
+      <button onclick="zeigeGalerie()">
+        <span id="galerieBtn">Zur Galerie</span>
+      </button>
+      <button onclick="window.open('https://wise.com','_blank')">
+        <span id="spendeBtn">Spenden über Wise</span>
+      </button>
+      <button onclick="document.getElementById('kontakt').scrollIntoView()">
+        <span id="kontaktBtn">Kontakt</span>
+      </button>
+      <select onchange="spracheWechseln(this.value)">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+      </select>
+    </nav>
+  </header>
 
-header {
-  background: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
+  <main id="galerie" style="display:none;">
+    <div class="bild-block">
+      <a href="Bunt.jpg" target="_blank">
+        <img src="Bunt.jpg" alt="Bunt">
+      </a>
+      <p>Bunt</p>
+    </div>
+    <div class="bild-block">
+      <a href="Ein Weg ins Dorf.jpg" target="_blank">
+        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf">
+      </a>
+      <p>Ein Weg ins Dorf</p>
+    </div>
+    <div class="bild-block">
+      <a href="Fischbot.jpg" target="_blank">
+        <img src="Fischbot.jpg" alt="Fischbot">
+      </a>
+      <p>Fischbot</p>
+    </div>
+    <div class="bild-block">
+      <a href="Mondpfat.jpg" target="_blank">
+        <img src="Mondpfat.jpg" alt="Mondpfat">
+      </a>
+      <p>Mondpfat</p>
+    </div>
+    <div class="bild-block">
+      <a href="Retro.jpg" target="_blank">
+        <img src="Retro.jpg" alt="Retro">
+      </a>
+      <p>Retro</p>
+    </div>
+    <div class="bild-block">
+      <a href="Sonnenuntergang.jpg" target="_blank">
+        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang">
+      </a>
+      <p>Sonnenuntergang</p>
+    </div>
+    <div class="bild-block">
+      <a href="Spaniesche Dorf.jpg" target="_blank">
+        <img src="Spaniesche Dorf.jpg" alt="Spanisches Dorf">
+      </a>
+      <p>Spanisches Dorf</p>
+    </div>
+    <div class="bild-block">
+      <a href="Winter Battle Encounter.jpg" target="_blank">
+        <img src="Winter Battle Encounter.jpg" alt="Winter Battle">
+      </a>
+      <p>Winter Battle</p>
+    </div>
+    <div class="bild-block">
+      <a href="Yacht Club.jpg" target="_blank">
+        <img src="Yacht Club.jpg" alt="Yacht Club">
+      </a>
+      <p>Yacht Club</p>
+    </div>
+    <div class="bild-block">
+      <a href="ruhiges-meer.jpg" target="_blank">
+        <img src="ruhiges-meer.jpg" alt="Hintergrund Meer">
+      </a>
+      <p>Meer & Himmel</p>
+    </div>
+  </main>
 
-nav {
-  margin-top: 1rem;
-}
+  <footer id="kontakt">
+    <h2 id="kontaktTitel">Kontakt</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="E-Mail" required>
+      <textarea placeholder="Nachricht..." rows="4" required></textarea>
+      <button type="submit">Senden</button>
+    </form>
+    <p class="email-hinweis">Oder direkt an: <strong>kesarkurt@gmail.com</strong></p>
+    <a class="spenden-button" href="https://wise.com" target="_blank">Spenden (freiwillig für meine Arbeit)</a>
+  </footer>
 
-nav button, nav select {
-  margin: 0.3rem;
-  padding: 0.6rem 1rem;
-  border: none;
-  background: #555;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  <script>
+    function zeigeGalerie() {
+      document.getElementById('galerie').style.display = 'flex';
+    }
 
-nav button:hover, nav select:hover {
-  background: #777;
-}
+    function spracheWechseln(sprache) {
+      const texte = {
+        de: {
+          headline: "Willkommen in meiner Bilderwelt",
+          galerieBtn: "Zur Galerie",
+          spendeBtn: "Spenden über Wise",
+          kontaktBtn: "Kontakt",
+          kontaktTitel: "Kontakt",
+        },
+        en: {
+          headline: "Welcome to my world of images",
+          galerieBtn: "To Gallery",
+          spendeBtn: "Donate via Wise",
+          kontaktBtn: "Contact",
+          kontaktTitel: "Contact",
+        }
+      };
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
+      document.getElementById('headline').textContent = texte[sprache].headline;
+      document.getElementById('galerieBtn').textContent = texte[sprache].galerieBtn;
+      document.getElementById('spendeBtn').textContent = texte[sprache].spendeBtn;
+      document.getElementById('kontaktBtn').textContent = texte[sprache].kontaktBtn;
+      document.getElementById('kontaktTitel').textContent = texte[sprache].kontaktTitel;
+    }
+  </script>
+</body>
+</html>
 
-.bild-block {
-  background: #f9f9f9;
-  border: 10px solid #bfa76f;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  padding: 1rem;
-  text-align: center;
-}
-
-.bild-block img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.bild-block h2 {
-  margin: 1rem 0 0.5rem;
-}
-
-.bild-block button {
-  padding: 0.5rem 1rem;
-  background: #00897b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.bild-block button:hover {
-  background: #00695c;
-}
-
-#spende, footer {
-  background: #eee;
-  padding: 2rem;
-  text-align: center;
-}
-
-.spenden-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #ff9800;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.spenden-button:hover {
-  background: #e65100;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 1rem auto;
-}
-
-input, textarea {
-  padding: 0.7rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
 
 
 
