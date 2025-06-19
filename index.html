@@ -2,19 +2,19 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Willkommen in meiner Bilderwelt</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Hero-Bereich -->
+  <!-- Hero / Willkommensbereich -->
   <header class="hero">
     <div class="hero-content">
       <h1>Willkommen in meiner<br>Bilderwelt</h1>
       <div class="buttons">
         <a href="#galerie" class="btn">Zur Galerie</a>
-        <a href="https://wise.com" class="btn">Spenden über Wise</a>
+        <a href="https://wise.com" class="btn" target="_blank">Spenden über Wise</a>
         <a href="mailto:deine@email.de" class="btn">Kontakt</a>
       </div>
     </div>
@@ -31,53 +31,7 @@
         <a href="mailto:deine@email.de" class="btn">Kaufen</a>
       </div>
 
-      <div class="image-container">
-        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" onclick="openLightbox(this)">
-        <p class="title">Ein Weg ins Dorf</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Fischbot.jpg" alt="Fischbot" onclick="openLightbox(this)">
-        <p class="title">Fischbot</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Mondpfat.jpg" alt="Mondpfat" onclick="openLightbox(this)">
-        <p class="title">Mondpfat</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Retro.jpg" alt="Retro" onclick="openLightbox(this)">
-        <p class="title">Retro</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" onclick="openLightbox(this)">
-        <p class="title">Sonnenuntergang</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" onclick="openLightbox(this)">
-        <p class="title">Spanisches Dorf</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter" onclick="openLightbox(this)">
-        <p class="title">Winter Battle Encounter</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
-
-      <div class="image-container">
-        <img src="Yacht Club.jpg" alt="Yacht Club" onclick="openLightbox(this)">
-        <p class="title">Yacht Club</p>
-        <a href="mailto:deine@email.de" class="btn">Kaufen</a>
-      </div>
+      <!-- Weitere Bilder kannst du hier hinzufügen -->
 
     </div>
   </section>
@@ -87,13 +41,12 @@
     <img id="lightbox-img" />
   </div>
 
-  <!-- Lightbox Script -->
+  <!-- Lightbox JavaScript -->
   <script>
     function openLightbox(img) {
       document.getElementById("lightbox-img").src = img.src;
       document.getElementById("lightbox").style.display = "flex";
     }
-
     document.getElementById("lightbox").onclick = function () {
       this.style.display = "none";
     };
@@ -101,6 +54,7 @@
 
 </body>
 </html>
+
 
 
 
