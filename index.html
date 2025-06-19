@@ -1,99 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Bilderwelt</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Galerie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="hero">
+        <h1>Willkommen in meiner Bilderwelt</h1>
+        <div class="buttons">
+            <a href="#galerie" class="btn">Zur Galerie</a>
+            <a href="mailto:deine@email.de" class="btn">Kontakt</a>
+            <a href="#" class="btn">Spenden über Wise</a>
+        </div>
+    </header>
 
-  <!-- Startseite -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Willkommen in meiner<br>Bilderwelt</h1>
-      <a href="#galerie" class="btn">Zur Galerie</a>
-      <div class="buttons">
-        <a href="https://wise.com/pay/kurtjak" target="_blank" class="btn">Spenden über Wise</a>
-        <a href="mailto:deine@email.de" class="btn">Kontakt</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galerie -->
-  <section id="galerie" class="galerie">
-    <div class="bilder-grid">
-      <!-- Wiederhole dieses div für jedes Bild -->
-      <div class="bild-container">
-        <img src="Bunt.jpg" alt="Bunt">
-        <p>Bunt</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf">
-        <p>Ein Weg ins Dorf</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Fischbot.jpg" alt="Fischbot">
-        <p>Fischbot</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Mondpfat.jpg" alt="Mondpfat">
-        <p>Mondpfat</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Retro.jpg" alt="Retro">
-        <p>Retro</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang">
-        <p>Sonnenuntergang</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Spaniesche Dorf.jpg" alt="Spanisches Dorf">
-        <p>Spanisches Dorf</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter">
-        <p>Winter Battle Encounter</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-      <div class="bild-container">
-        <img src="Yacht Club.jpg" alt="Yacht Club">
-        <p>Yacht Club</p>
-        <button onclick="kontakt()">Kaufen</button>
-        <div class="like" onclick="like(this)">❤️ <span>0</span></div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function kontakt() {
-      window.location.href = "mailto:deine@email.de";
-    }
-
-    function like(el) {
-      let count = el.querySelector("span");
-      count.innerText = parseInt(count.innerText) + 1;
-    }
-  </script>
-
+    <main id="galerie" class="galerie">
+        <div class="bild-container">
+            <img src="Bunt.jpg" alt="Bunt">
+            <p>Bunt</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf">
+            <p>Ein Weg ins Dorf</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Fischbot.jpg" alt="Fischbot">
+            <p>Fischbot</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Mondpfat.jpg" alt="Mondpfat">
+            <p>Mondpfat</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Retro.jpg" alt="Retro">
+            <p>Retro</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Sonnenuntergang.jpg" alt="Sonnenuntergang">
+            <p>Sonnenuntergang</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf">
+            <p>Spaniesche Dorf</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Winter Battle Encounter.jpg" alt="Winter Battle Encounter">
+            <p>Winter Battle Encounter</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+        <div class="bild-container">
+            <img src="Yacht Club.jpg" alt="Yacht Club">
+            <p>Yacht Club</p>
+            <a href="mailto:deine@email.de" class="kaufen-btn">Kaufen</a>
+        </div>
+    </main>
 </body>
 </html>
+
 
 
 
