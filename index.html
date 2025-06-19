@@ -1,82 +1,75 @@
-/* Grund-Reset */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willkommen in meiner Bilderwelt</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
 
-/* Hero-Bereich */
-.hero {
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
+  <header class="hero">
+    <h1>Willkommen in meiner<br>Bilderwelt</h1>
+    <div class="buttons">
+      <a href="#galerie" class="btn">Zur Galerie</a>
+      <a href="https://wise.com" class="btn">Spenden über Wise</a>
+      <a href="mailto:deine@email.de" class="btn">Kontakt</a>
+    </div>
+  </header>
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+  <section id="galerie">
+    <div class="gallery">
+      <!-- Bildergalerie ohne x.png -->
+      <div class="image-container"><img src="Bunt.jpg" alt="Bunt" onclick="openLightbox(this)"><p class="title">Bunt</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Ein Weg ins Dorf.jpg" alt="Ein Weg ins Dorf" onclick="openLightbox(this)"><p class="title">Ein Weg ins Dorf</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Fischbot.jpg" alt="Fischbot" onclick="openLightbox(this)"><p class="title">Fischbot</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Mondpfat.jpg" alt="Mondpfat" onclick="openLightbox(this)"><p class="title">Mondpfat</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Monets Garten.png" alt="Monets Garten" onclick="openLightbox(this)"><p class="title">Monets Garten</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Paris in nachts Lict.png" alt="Paris in nachts Lict" onclick="openLightbox(this)"><p class="title">Paris in nachts Lict</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Renesans.png" alt="Renesans" onclick="openLightbox(this)"><p class="title">Renesans</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Retro.jpg" alt="Retro" onclick="openLightbox(this)"><p class="title">Retro</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" onclick="openLightbox(this)"><p class="title">Sonnenuntergang</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" onclick="openLightbox(this)"><p class="title">Spaniesche Dorf</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Venedig.png" alt="Venedig" onclick="openLightbox(this)"><p class="title">Venedig</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Winter Battle.png" alt="Winter Battle" onclick="openLightbox(this)"><p class="title">Winter Battle</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+      <div class="image-container"><img src="Yacht Club.jpg" alt="Yacht Club" onclick="openLightbox(this)"><p class="title">Yacht Club</p><a href="mailto:deine@email.de" class="btn">Kaufen</a></div>
+    </div>
+  </section>
 
-.buttons {
-  margin-top: 20px;
-}
+  <div id="lightbox">
+    <img id="lightbox-img" />
+  </div>
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #fff;
-  color: #2a5298;
-  text-decoration: none;
-  border-radius: 30px;
-  margin: 5px;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    document.getElementById("lightbox").onclick = function () {
+      this.style.display = "none";
+    };
+  </script>
 
-.btn:hover {
-  background-color: #2a5298;
-  color: #fff;
-}
+</body>
+</html>
 
-/* Galerie-Bereich */
-#galerie {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.image-container {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.image-container:hover {
-  transform: scale(1.02);
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.title {
-  margin: 10px 0;
-  font-weight: bold;
-}
 
 
 
