@@ -1,80 +1,108 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80'); /* Ruhiges Meer */
-  background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
-  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #eaeaea);
+  color: #333;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+nav {
+  margin-top: 1rem;
 }
 
-.gallery {
+nav button, nav select {
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #555;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover, nav select:hover {
+  background: #777;
+}
+
+main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
 
-.image-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 8px solid #bfa76f; /* Altgold Rahmen */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+.bild-block {
+  background: #f9f9f9;
+  border: 10px solid #bfa76f;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   padding: 1rem;
-  transition: transform 0.3s;
+  text-align: center;
 }
 
-.image-card:hover {
-  transform: scale(1.02);
-}
-
-.image-card img {
+.bild-block img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-.image-card h2 {
-  color: #333;
-  margin-top: 0.5rem;
+.bild-block h2 {
+  margin: 1rem 0 0.5rem;
 }
 
-.donate {
-  margin: 3rem 0;
+.bild-block button {
+  padding: 0.5rem 1rem;
+  background: #00897b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bild-block button:hover {
+  background: #00695c;
+}
+
+#spende, footer {
+  background: #eee;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #000;
+  text-align: center;
 }
 
-.donate-btn {
+.spenden-button {
   display: inline-block;
-  background-color: #00695c;
+  margin-top: 1rem;
+  background: #ff9800;
   color: white;
   padding: 0.7rem 1.5rem;
-  border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
+  border-radius: 5px;
 }
 
-.donate-btn:hover {
-  background-color: #004d40;
+.spenden-button:hover {
+  background: #e65100;
 }
 
-footer {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  font-size: 0.9rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1rem auto;
 }
+
+input, textarea {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 
 
 
