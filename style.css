@@ -9,7 +9,7 @@ body {
 /* Hero-Bereich mit Meer bei Dämmerung */
 .hero {
   height: 100vh;
-  background: url("x.png") center center/cover no-repeat;
+  background: url("xx.jpg") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
