@@ -72,13 +72,13 @@ body {
 }
 
 .image-container {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: transparent;   /* kein weißer Hintergrund */
+  padding: 0;                /* kein Innenabstand */
+  box-shadow: none;          /* kein Schatten */
   text-align: center;
   transition: transform 0.2s;
 }
+
 
 .image-container:hover {
   transform: scale(1.02);
