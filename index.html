@@ -3,47 +3,11 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kontakt Wallet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      background: #f5f5f5;
-      margin: 0;
-    }
-    .btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bildergalerie</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<button class="btn" onclick="showWallet()">Kontakt</button>
-
-<script>
-  function showWallet() {
-    const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
-    alert("Wallet-Adresse:\n" + wallet);
-  }
-</script>
-
-</body>
-</html>
-
 
 <!-- Hero-Bereich -->
 <header class="hero">
@@ -59,20 +23,25 @@
 <!-- BTC Wallet Bereich -->
 <a href="#" class="btn" onclick="copyWallet()">bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2</a>
 <button class="btn" onclick="copyWallet()">Kunst unterstützen</button>
-
 <p id="walletInfo" class="wallet-text" style="display:none;">Wallet-Adresse wurde in die Zwischenablage kopiert!</p>
 
 <!-- Copy Script -->
 <script>
   function copyWallet() {
     const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
-    navigator.clipboard.writeText(wallet).then(function() {
-      alert("Wallet-Adresse wurde in die Zwischenablage kopiert!");
-    }, function(err) {
+    navigator.clipboard.writeText(wallet).then(function () {
+      const info = document.getElementById("walletInfo");
+      info.style.display = "block";
+      info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
+      setTimeout(() => {
+        info.style.display = "none";
+      }, 3000); // Versteckt sich nach 3 Sekunden
+    }, function (err) {
       alert("Fehler beim Kopieren: " + err);
     });
   }
 </script>
+
 <!-- Galerie -->
 <section id="galerie">
   <div class="gallery">
@@ -108,6 +77,7 @@
 
 </body>
 </html>
+
 
 
 
