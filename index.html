@@ -3,11 +3,47 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bildergalerie</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt Wallet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    .btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
+
+<button class="btn" onclick="showWallet()">Kontakt</button>
+
+<script>
+  function showWallet() {
+    const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
+    alert("Wallet-Adresse:\n" + wallet);
+  }
+</script>
+
+</body>
+</html>
+
 
 <!-- Hero-Bereich -->
 <header class="hero">
