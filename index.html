@@ -9,7 +9,7 @@
 </head>
 <body>
 
- <!-- Hero-Bereich -->
+<!-- Hero-Bereich -->
 <header class="hero">
   <div class="hero-content">
     <h1>Willkommen in meiner<br>Bilderwelt</h1>
@@ -20,10 +20,12 @@
   </div>
 </header>
 
+<!-- BTC Wallet Bereich -->
 <a href="#" class="btn" onclick="copyWallet()">bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2</a>
 <button class="btn" onclick="copyWallet()">Kunst unterstützen</button>
 <p id="walletInfo" class="wallet-text" style="display:none;">Wallet-Adresse wurde in die Zwischenablage kopiert!</p>
 
+<!-- Copy Script -->
 <script>
   function copyWallet() {
     const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
@@ -31,71 +33,51 @@
       const info = document.getElementById("walletInfo");
       info.style.display = "block";
       info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
+      setTimeout(() => {
+        info.style.display = "none";
+      }, 3000); // Versteckt sich nach 3 Sekunden
     }, function (err) {
       alert("Fehler beim Kopieren: " + err);
     });
   }
 </script>
 
-  function copyWallet() {
-    const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
-    navigator.clipboard.writeText(wallet).then(function() {
-      const info = document.getElementById("walletInfo");
-      info.style.display = "block";
-      info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
-    }, function(err) {
-      alert("Fehler beim Kopieren: " + err);
-    });
-  }
-</script>
-
-
-  function copyWallet() {
-    const wallet = "bc1qexamplewalletadresse123xyz"; // <- bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2
-    navigator.clipboard.writeText(wallet).then(function() {
-      alert("Wallet-Adresse kopiert!");
-    }, function(err) {
-      alert("Fehler beim Kopieren: " + err);
-    });
-  }
-</script>
-
-
-  <!-- Galerie -->
-  <section id="galerie">
-    <div class="gallery">
-      <div class="image-container"><img src="Skize.jpg" alt="Skize" onclick="openLightbox(this)"><p class="title">Skize</p></div>
-      <div class="image-container"><img src="Schiffe im Meer.jpg" alt="Schiffe im Meer" onclick="openLightbox(this)"><p class="title">Schiffe im Meer</p></div>
-      <div class="image-container"><img src="Fischbot.jpg" alt="Fischbot" onclick="openLightbox(this)"><p class="title">Fischbot</p></div>
-      <div class="image-container"><img src="Mondpfat.jpg" alt="Mondpfat" onclick="openLightbox(this)"><p class="title">Mondpfat</p></div>
-      <div class="image-container"><img src="Monets Garten.png" alt="Monets Garten" onclick="openLightbox(this)"><p class="title">Monets Garten</p></div>
-      <div class="image-container"><img src="Paris im Dämmerung.png" alt="Paris im Dämmerung" onclick="openLightbox(this)"><p class="title">Paris im Dämmerung</p></div>
-      <div class="image-container"><img src="Renesans.png" alt="Renesans" onclick="openLightbox(this)"><p class="title">Renesans</p></div>
-      <div class="image-container"><img src="Winterlandschaft.jpg" alt="Winterlandschaft" onclick="openLightbox(this)"><p class="title">Winterlandschaft</p></div>
-      <div class="image-container"><img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" onclick="openLightbox(this)"><p class="title">Sonnenuntergang</p></div>
-      <div class="image-container"><img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" onclick="openLightbox(this)"><p class="title">Spaniesche Dorf</p></div>
-      <div class="image-container"><img src="Venedig.png" alt="Venedig" onclick="openLightbox(this)"><p class="title">Venedig</p></div>
-      <div class="image-container"><img src="Yacht Club.jpg" alt="Yacht Club" onclick="openLightbox(this)"><p class="title">Yacht Club</p></div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox">
-    <img id="lightbox-img" />
+<!-- Galerie -->
+<section id="galerie">
+  <div class="gallery">
+    <div class="image-container"><img src="Skize.jpg" alt="Skize" onclick="openLightbox(this)"><p class="title">Skize</p></div>
+    <div class="image-container"><img src="Schiffe im Meer.jpg" alt="Schiffe im Meer" onclick="openLightbox(this)"><p class="title">Schiffe im Meer</p></div>
+    <div class="image-container"><img src="Fischbot.jpg" alt="Fischbot" onclick="openLightbox(this)"><p class="title">Fischbot</p></div>
+    <div class="image-container"><img src="Mondpfat.jpg" alt="Mondpfat" onclick="openLightbox(this)"><p class="title">Mondpfat</p></div>
+    <div class="image-container"><img src="Monets Garten.png" alt="Monets Garten" onclick="openLightbox(this)"><p class="title">Monets Garten</p></div>
+    <div class="image-container"><img src="Paris im Dämmerung.png" alt="Paris im Dämmerung" onclick="openLightbox(this)"><p class="title">Paris im Dämmerung</p></div>
+    <div class="image-container"><img src="Renesans.png" alt="Renesans" onclick="openLightbox(this)"><p class="title">Renesans</p></div>
+    <div class="image-container"><img src="Winterlandschaft.jpg" alt="Winterlandschaft" onclick="openLightbox(this)"><p class="title">Winterlandschaft</p></div>
+    <div class="image-container"><img src="Sonnenuntergang.jpg" alt="Sonnenuntergang" onclick="openLightbox(this)"><p class="title">Sonnenuntergang</p></div>
+    <div class="image-container"><img src="Spaniesche Dorf.jpg" alt="Spaniesche Dorf" onclick="openLightbox(this)"><p class="title">Spaniesche Dorf</p></div>
+    <div class="image-container"><img src="Venedig.png" alt="Venedig" onclick="openLightbox(this)"><p class="title">Venedig</p></div>
+    <div class="image-container"><img src="Yacht Club.jpg" alt="Yacht Club" onclick="openLightbox(this)"><p class="title">Yacht Club</p></div>
   </div>
+</section>
 
-  <script>
-    function openLightbox(img) {
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("lightbox").style.display = "flex";
-    }
-    document.getElementById("lightbox").onclick = function () {
-      this.style.display = "none";
-    };
-  </script>
+<!-- Lightbox -->
+<div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+  <img id="lightbox-img" style="max-width: 90%; max-height: 90%;" />
+</div>
+
+<script>
+  function openLightbox(img) {
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+  document.getElementById("lightbox").onclick = function () {
+    this.style.display = "none";
+  };
+</script>
 
 </body>
 </html>
+
 
 
 
