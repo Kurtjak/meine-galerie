@@ -11,6 +11,15 @@ body {
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
+<style>
+  /* Wallet-Anzeige unter dem Kontakt-Button */
+  #walletDisplay {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;          /* weiße Schriftfarbe */
+    user-select: text;     /* Text kopierbar */
+  }
+</style>
 
 /* Hero-Bereich mit Meer bei Dämmerung */
 .hero {
