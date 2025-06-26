@@ -29,18 +29,14 @@
 <script>
   function copyWallet() {
     const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
-    navigator.clipboard.writeText(wallet).then(function () {
-      const info = document.getElementById("walletInfo");
-      info.style.display = "block";
-      info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
-      setTimeout(() => {
-        info.style.display = "none";
-      }, 3000); // Versteckt sich nach 3 Sekunden
-    }, function (err) {
+    navigator.clipboard.writeText(wallet).then(function() {
+      alert("Wallet-Adresse wurde in die Zwischenablage kopiert!");
+    }, function(err) {
       alert("Fehler beim Kopieren: " + err);
     });
   }
 </script>
+
 
 <!-- Galerie -->
 <section id="galerie">
