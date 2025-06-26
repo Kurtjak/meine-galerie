@@ -5,21 +5,21 @@ body {
   background-color: #f4f4f4;
   color: #333;
 }
+
 .wallet-text {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-<style>
-  /* Wallet-Anzeige unter dem Kontakt-Button */
-  #walletDisplay {
-    margin-top: 10px;
-    font-weight: bold;
-    color: white;          /* weiße Schriftfarbe */
-    user-select: text;     /* Text kopierbar */
-  }
-</style>
+
+/* Wallet-Anzeige unter dem Kontakt-Button */
+#walletDisplay {
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;          /* weiße Schriftfarbe */
+  user-select: text;     /* Text kopierbar */
+}
 
 /* Hero-Bereich mit Meer bei Dämmerung */
 .hero {
@@ -32,6 +32,7 @@ body {
   color: white;
   position: relative;
 }
+
 .hero-btn {
   position: absolute;
   top: 20px;
@@ -111,7 +112,6 @@ body {
   transition: transform 0.2s;
 }
 
-
 .image-container:hover {
   transform: scale(1.02);
 }
@@ -137,12 +137,15 @@ body {
   align-items: center;
   z-index: 999;
 }
+
 #lightbox img {
   max-width: 90%;
   max-height: 90%;
   border: 5px solid white;
   border-radius: 8px;
 }
+
+
 
 
 
