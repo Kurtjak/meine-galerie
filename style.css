@@ -6,22 +6,7 @@ body {
   color: #333;
 }
 
-.wallet-text {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Wallet-Anzeige unter dem Kontakt-Button */
-#walletDisplay {
-  margin-top: 10px;
-  font-weight: bold;
-  color: white;          /* weiße Schriftfarbe */
-  user-select: text;     /* Text kopierbar */
-}
-
-/* Hero-Bereich mit Meer bei Dämmerung */
+/* Hero-Bereich mit Meer-Hintergrund */
 .hero {
   height: 100vh;
   background: url("xx.jpg") center center/cover no-repeat;
@@ -31,28 +16,12 @@ body {
   text-align: center;
   color: white;
   position: relative;
-}
-
-.hero-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(0,0,0,0.6);
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  z-index: 10;
-}
-
-.hero-btn:hover {
-  background-color: rgba(0,0,0,0.85);
+  flex-direction: column;
+  padding: 20px;
 }
 
 .hero-content {
-  z-index: 2;
+  max-width: 800px;
 }
 
 .hero h1 {
@@ -61,25 +30,32 @@ body {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.btn {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+/* Kontakt-Button */
+.hero-btn {
+  background-color: rgba(0,0,0,0.6);
+  border: none;
   padding: 12px 25px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
+  color: white;
+  cursor: pointer;
   transition: background-color 0.3s;
+  margin-bottom: 10px;
+  user-select: none;
 }
 
-.btn:hover {
-  background-color: rgba(0, 0, 0, 0.85);
+.hero-btn:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+
+/* Wallet Adresse Anzeige */
+#walletDisplay {
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  user-select: text;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
 /* Spenden-Text */
@@ -105,9 +81,9 @@ body {
 }
 
 .image-container {
-  background: transparent;   /* kein weißer Hintergrund */
-  padding: 0;                /* kein Innenabstand */
-  box-shadow: none;          /* kein Schatten */
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
   text-align: center;
   transition: transform 0.2s;
 }
@@ -128,6 +104,7 @@ body {
   font-weight: bold;
 }
 
+/* Lightbox */
 #lightbox {
   display: none;
   position: fixed;
@@ -144,6 +121,7 @@ body {
   border: 5px solid white;
   border-radius: 8px;
 }
+
 
 
 
