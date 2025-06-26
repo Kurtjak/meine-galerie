@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bildergalerie</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Wallet-Anzeige unter dem Kontakt-Button */
+    #walletDisplay {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+      user-select: text; /* Text kopierbar */
+    }
+  </style>
 </head>
 <body>
 
@@ -13,34 +22,13 @@
 <header class="hero">
   <div class="hero-content">
     <h1>Willkommen in meiner<br>Bilderwelt</h1>
-    <a href="mailto:kesarkurt@gmail.com" class="btn">Kontakt</a>
+    <button class="btn" id="kontaktBtn">Kontakt</button>
+    <div id="walletDisplay" style="display:none;"></div>
     <div>
       <p class="spenden-text">Fördere kreative Projekte</p>
     </div>
   </div>
 </header>
-
-<!-- BTC Wallet Bereich -->
-<a href="#" class="btn" onclick="copyWallet()">bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2</a>
-<button class="btn" onclick="copyWallet()">Kunst unterstützen</button>
-<p id="walletInfo" class="wallet-text" style="display:none;">Wallet-Adresse wurde in die Zwischenablage kopiert!</p>
-
-<!-- Copy Script -->
-<script>
-  function copyWallet() {
-    const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
-    navigator.clipboard.writeText(wallet).then(function () {
-      const info = document.getElementById("walletInfo");
-      info.style.display = "block";
-      info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
-      setTimeout(() => {
-        info.style.display = "none";
-      }, 3000); // Versteckt sich nach 3 Sekunden
-    }, function (err) {
-      alert("Fehler beim Kopieren: " + err);
-    });
-  }
-</script>
 
 <!-- Galerie -->
 <section id="galerie">
@@ -66,10 +54,27 @@
 </div>
 
 <script>
+  // Wallet Adresse zum Anzeigen
+  const walletAddress = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
+
+  const kontaktBtn = document.getElementById("kontaktBtn");
+  const walletDisplay = document.getElementById("walletDisplay");
+
+  kontaktBtn.addEventListener("click", () => {
+    if (walletDisplay.style.display === "none") {
+      walletDisplay.textContent = "Meine Wallet-Adresse: " + walletAddress;
+      walletDisplay.style.display = "block";
+    } else {
+      walletDisplay.style.display = "none";
+    }
+  });
+
+  // Lightbox-Funktion
   function openLightbox(img) {
     document.getElementById("lightbox-img").src = img.src;
     document.getElementById("lightbox").style.display = "flex";
   }
+
   document.getElementById("lightbox").onclick = function () {
     this.style.display = "none";
   };
@@ -77,6 +82,7 @@
 
 </body>
 </html>
+
 
 
 
