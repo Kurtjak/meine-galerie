@@ -22,16 +22,22 @@
 
 <a href="#" class="btn" onclick="copyWallet()">bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2</a>
 <p id="walletInfo" class="wallet-text">BTC: bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2</p>
+<button class="btn" onclick="copyWallet()">Kunst unterstützen</button>
+<p id="walletInfo" class="wallet-text" style="display:none;">Adresse kopiert!</p>
+
 <script>
   function copyWallet() {
     const wallet = "bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2";
     navigator.clipboard.writeText(wallet).then(function() {
-      alert("Wallet-Adresse kopiert!");
+      const info = document.getElementById("walletInfo");
+      info.style.display = "block";
+      info.textContent = "Wallet-Adresse wurde in die Zwischenablage kopiert!";
     }, function(err) {
       alert("Fehler beim Kopieren: " + err);
     });
   }
 </script>
+
 
   function copyWallet() {
     const wallet = "bc1qexamplewalletadresse123xyz"; // <- bc1qfk3le46l6jzpv0cttv2tk6cz3t62egqh952sg2
